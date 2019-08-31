@@ -1,8 +1,8 @@
-# Copyright (C) 2019 WooCommerce Hide Coupon Name
-# This file is distributed under the same license as the WooCommerce Hide Coupon Name package.
+# Copyright (C) 2019 Hide Coupon Name for WooCommerce
+# This file is distributed under the same license as the Hide Coupon Name for WooCommerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Hide Coupon Name\n"
+"Project-Id-Version: Hide Coupon Name for WooCommerce\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,14 +24,14 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.3.0; wp-5.2.2"
 
-#: woocommerce-hide-coupon-name.php:80
+#: hide-coupon-name-for-woocommerce.php:80
 msgid "Hide Coupon"
 msgstr "test 3"
 
-#: woocommerce-hide-coupon-name.php:81
+#: hide-coupon-name-for-woocommerce.php:81
 msgid "Check this box to Hide the Coupon code."
 msgstr "test"
 
-#: woocommerce-hide-coupon-name.php:100
+#: hide-coupon-name-for-woocommerce.php:100
 msgid "Discount Applied"
 msgstr "teet 2"

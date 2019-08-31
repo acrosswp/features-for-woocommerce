@@ -40,12 +40,12 @@ const config = {
 
 //// POT file.
 wpPot( {
-	package: 'WooCommerce Hide Coupon Name',
+	package: 'Hide Coupon Name for WooCommerce',
 	domain: 'hcnfw',
 	destFile: 'i18n/languages/hcnfw.pot',
 	relativeTo: './',
 	src: [ './**/*.php' ],
-	bugReport: 'https://github.com/raftaar1191/woocommerce-hide-coupon-name/issues',
+	bugReport: 'https://github.com/raftaar1191/hide-coupon-name-for-woocommerce/issues',
 } );
 
 // Export the config object.
