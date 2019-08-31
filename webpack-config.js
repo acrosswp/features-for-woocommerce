@@ -41,8 +41,8 @@ const config = {
 //// POT file.
 wpPot( {
 	package: 'WooCommerce Hide Coupon Name',
-	domain: 'whcn',
-	destFile: 'i18n/languages/whcn.pot',
+	domain: 'hcnfw',
+	destFile: 'i18n/languages/hcnfw.pot',
 	relativeTo: './',
 	src: [ './**/*.php' ],
 	bugReport: 'https://github.com/raftaar1191/woocommerce-hide-coupon-name/issues',

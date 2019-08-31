@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: WooCommerce Hide Coupon Name
+ * Plugin Name: Hide Coupon Name for WooCommerce
  * Plugin URI:  https://raftaar1191.com/
  * Description: This plugin provided a setting to hide the each coupon code into the frontend.
  * Author:      raftaar1191
  * Author URI:  https://profiles.wordpress.org/raftaar1191/
  * Version:     1.0.0
- * Text Domain: whcn
+ * Text Domain: hcnfw
  * Domain Path: /i18n/languages/
  */
 
@@ -22,18 +22,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 // Codebase version
-if ( ! defined( 'WHCN_PLUGIN_VERSION' ) ) {
-	define( 'WHCN_PLUGIN_VERSION', '1.0.0' );
+if ( ! defined( 'HCNFW_PLUGIN_VERSION' ) ) {
+	define( 'HCNFW_PLUGIN_VERSION', '1.0.0' );
 }
 
 // Directory
-if ( ! defined( 'WHCN_PLUGIN_DIR' ) ) {
-	define( 'WHCN_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+if ( ! defined( 'HCNFW_PLUGIN_DIR' ) ) {
+	define( 'HCNFW_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 }
 
 // Plugin Basename
-if ( ! defined( 'WHCN_PLUGIN_BASENAME' ) ) {
-	define( 'WHCN_PLUGIN_BASENAME', plugin_basename( WHCN_PLUGIN_DIR ) );
+if ( ! defined( 'HCNFW_PLUGIN_BASENAME' ) ) {
+	define( 'HCNFW_PLUGIN_BASENAME', plugin_basename( HCNFW_PLUGIN_DIR ) );
 }
 
 
@@ -42,16 +42,16 @@ if ( ! defined( 'WHCN_PLUGIN_BASENAME' ) ) {
  *
  * @since 1.0.0
  */
-function whcn_woocommerce_helper_loaded_callback() {
+function hcnfw_woocommerce_helper_loaded_callback() {
 
-	load_plugin_textdomain('whcn', false, WHCN_PLUGIN_BASENAME . '/i18n/languages');
+	load_plugin_textdomain('hcnfw', false, HCNFW_PLUGIN_BASENAME . '/i18n/languages');
 
-	add_action( 'woocommerce_process_shop_coupon_meta', 'whcn_woocommerce_process_shop_coupon_meta_callback', 10, 2 );
-	add_action( 'woocommerce_coupon_options', 'whcn_woocommerce_coupon_options_callback', 10, 2 );
-	add_filter( 'woocommerce_cart_totals_coupon_label', 'whcn_woocommerce_cart_totals_coupon_label_callback', 10, 2 );
+	add_action( 'woocommerce_process_shop_coupon_meta', 'hcnfw_woocommerce_process_shop_coupon_meta_callback', 10, 2 );
+	add_action( 'woocommerce_coupon_options', 'hcnfw_woocommerce_coupon_options_callback', 10, 2 );
+	add_filter( 'woocommerce_cart_totals_coupon_label', 'hcnfw_woocommerce_cart_totals_coupon_label_callback', 10, 2 );
 }
 
-add_action( 'woocommerce_helper_loaded', 'whcn_woocommerce_helper_loaded_callback' );
+add_action( 'woocommerce_helper_loaded', 'hcnfw_woocommerce_helper_loaded_callback' );
 
 /**
  * Save Coupon code value into the Post meta
@@ -61,10 +61,10 @@ add_action( 'woocommerce_helper_loaded', 'whcn_woocommerce_helper_loaded_callbac
  * @param $post_id
  * @param $post
  */
-function whcn_woocommerce_process_shop_coupon_meta_callback( $post_id, $post ) {
+function hcnfw_woocommerce_process_shop_coupon_meta_callback( $post_id, $post ) {
 
-	$defer_apply = isset( $_POST['_whcn_hide_coupon'] ) ? $_POST['_whcn_hide_coupon'] : '';
-	update_post_meta( $post_id, '_whcn_hide_coupon', $defer_apply );
+	$defer_apply = isset( $_POST['_hcnfw_hide_coupon'] ) ? $_POST['_hcnfw_hide_coupon'] : '';
+	update_post_meta( $post_id, '_hcnfw_hide_coupon', $defer_apply );
 
 }
 
@@ -76,15 +76,15 @@ function whcn_woocommerce_process_shop_coupon_meta_callback( $post_id, $post ) {
  * @param null $coupon_id
  * @param null $coupon
  */
-function whcn_woocommerce_coupon_options_callback( $coupon_id = null, $coupon = null ) {
+function hcnfw_woocommerce_coupon_options_callback( $coupon_id = null, $coupon = null ) {
 
-	$value = get_post_meta( $coupon_id, '_whcn_hide_coupon', true );
+	$value = get_post_meta( $coupon_id, '_hcnfw_hide_coupon', true );
 
 	// defer apply option
 	woocommerce_wp_checkbox( array(
-		'id'          => '_whcn_hide_coupon',
-		'label'       => __( 'Hide Coupon', 'whcn' ),
-		'description' => __( "Check this box to Hide the Coupon code.", 'whcn' ),
+		'id'          => '_hcnfw_hide_coupon',
+		'label'       => __( 'Hide Coupon', 'hcnfw' ),
+		'description' => __( "Check this box to Hide the Coupon code.", 'hcnfw' ),
 		'value'       => $value,
 	) );
 
@@ -100,10 +100,10 @@ function whcn_woocommerce_coupon_options_callback( $coupon_id = null, $coupon = 
  *
  * @return string $text
  */
-function whcn_woocommerce_cart_totals_coupon_label_callback( $text, $coupon ) {
-	$value = get_post_meta( $coupon->get_id(), '_whcn_hide_coupon', true );
+function hcnfw_woocommerce_cart_totals_coupon_label_callback( $text, $coupon ) {
+	$value = get_post_meta( $coupon->get_id(), '_hcnfw_hide_coupon', true );
 	if ( ! empty( $value ) ) {
-		$text = __( 'Discount Applied', 'whcn' );
+		$text = __( 'Discount Applied', 'hcnfw' );
 	}
 
 	return $text;
