@@ -1,0 +1,42 @@
+{
+  "name": "woocommerce-hide-coupon-name",
+  "version": "1.0.0",
+  "description": "Hide Coupon Code from Cart, Checkout and Receipt Page",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "scripts": {
+    "watch": "webpack --mode=development --watch --config webpack-config.js",
+    "build": "webpack --mode=production --config webpack-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raftaar1191/woocommerce-hide-coupon-name.git"
+  },
+  "keywords": [
+    "wordpress",
+    "woocommerce",
+    "coupon",
+    "webpack",
+    "javascript"
+  ],
+  "author": "raftaar1191",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/raftaar1191/woocommerce-hide-coupon-name/issues"
+  },
+  "homepage": "https://github.com/raftaar1191/woocommerce-hide-coupon-name#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "lodash": "^4.17.15",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "wp-pot": "^1.7.2"
+  }
+}

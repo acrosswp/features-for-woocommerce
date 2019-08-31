@@ -31,12 +31,21 @@ if ( ! defined( 'WHCN_PLUGIN_DIR' ) ) {
 	define( 'WHCN_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 }
 
+// Plugin Basename
+if ( ! defined( 'WHCN_PLUGIN_BASENAME' ) ) {
+	define( 'WHCN_PLUGIN_BASENAME', plugin_basename( WHCN_PLUGIN_DIR ) );
+}
+
+
 /**
  * Load all the files, hooks and Actions
  *
  * @since 1.0.0
  */
 function whcn_woocommerce_helper_loaded_callback() {
+
+	load_plugin_textdomain('whcn', false, WHCN_PLUGIN_BASENAME . '/i18n/languages');
+
 	add_action( 'woocommerce_process_shop_coupon_meta', 'whcn_woocommerce_process_shop_coupon_meta_callback', 10, 2 );
 	add_action( 'woocommerce_coupon_options', 'whcn_woocommerce_coupon_options_callback', 10, 2 );
 	add_filter( 'woocommerce_cart_totals_coupon_label', 'whcn_woocommerce_cart_totals_coupon_label_callback', 10, 2 );
