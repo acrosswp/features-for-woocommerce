@@ -20,7 +20,7 @@ Add setting into the Dashboard Create Coupon fields where we can click on option
 
 ## Screenshots/Video ##
 
-https://www.youtube.com/watch?v=dJrykKQGDcs
+https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 
 ## Changelog ##
