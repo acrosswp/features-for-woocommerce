@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Hide Coupon Name for WooCommerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hide Coupon Name for WooCommerce \n"
+"Project-Id-Version: Hide Coupon Name for WooCommerce\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,14 +14,14 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: hide-coupon-name-for-woocommerce.php:80
+#: hide-coupon-name-for-woocommerce.php:86
 msgid "Hide Coupon"
 msgstr ""
 
-#: hide-coupon-name-for-woocommerce.php:81
+#: hide-coupon-name-for-woocommerce.php:87
 msgid "Check this box to Hide the Coupon code."
 msgstr ""
 
-#: hide-coupon-name-for-woocommerce.php:100
+#: hide-coupon-name-for-woocommerce.php:106
 msgid "Discount Applied"
 msgstr ""
