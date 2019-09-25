@@ -8,12 +8,38 @@ if ( ! class_exists( 'FFW_WooCommerce_Checkout_With_BuddyPress' ) ) {
 
 			// check if buddypress or buddyboss platform plugin exists
 			if ( class_exists( 'buddypress' ) ) {
-				add_action( 'woocommerce_checkout_process', array( $this, 'woocommerce_checkout_process' ) );
-				add_filter( 'woocommerce_thankyou_order_received_text', array(
-					$this,
-					'woocommerce_thankyou_order_received_text'
-				), 100, 3 );
+				add_action( 'woocommerce_checkout_process', array( $this, 'woocommerce_create_account_process' ) );
+				add_filter( 'woocommerce_thankyou_order_received_text', array( $this, 'woocommerce_thankyou_order_received_text' ), 100, 3 );
+				add_filter( 'woocommerce_register_form', array( $this, 'register_form' ), 0 );
+				add_action( 'wp_loaded', array( $this, 'process_registration' ), 10 );
 			}
+		}
+
+		public function process_registration() {
+			$nonce_value = isset( $_POST['_wpnonce'] ) ? wp_unslash( $_POST['_wpnonce'] ) : '';
+			$nonce_value = isset( $_POST['woocommerce-register-nonce'] ) ? wp_unslash( $_POST['woocommerce-register-nonce'] ) : $nonce_value;
+
+			if ( isset( $_POST['register'], $_POST['email'] ) && wp_verify_nonce( $nonce_value, 'woocommerce-register' ) ) {
+				$this->woocommerce_create_account_process();
+
+				/**
+				 * Update the Message
+				 */
+				add_filter( 'woocommerce_add_message', array( $this, 'add_message' ) );
+
+				/**
+				 * Do not allow user to get login when they create account from my account page
+				 */
+				add_filter( 'woocommerce_registration_auth_new_customer', '__return_false', 100 );
+			}
+		}
+
+		public function add_message( $text ) {
+			return $this->woocommerce_login_text();
+		}
+
+		public function register_form() {
+			printf( '<p>%s</p>', $this->woocommerce_login_text() );
 		}
 
 		/**
@@ -25,7 +51,7 @@ if ( ! class_exists( 'FFW_WooCommerce_Checkout_With_BuddyPress' ) ) {
 		 */
 		function woocommerce_thankyou_order_received_text( $text ) {
 			if ( ! is_user_logged_in() && is_checkout() && $this->ffm_woocommerce_change_checkout_process() ) {
-				$text = __( 'Before you can login, you need to confirm your email address via the email we just sent to you.', 'ffw' );
+				$text = $this->woocommerce_login_text();
 			}
 
 			return $text;
@@ -38,7 +64,18 @@ if ( ! class_exists( 'FFW_WooCommerce_Checkout_With_BuddyPress' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		function woocommerce_checkout_process() {
+		function woocommerce_login_text() {
+			return __( 'Before you can login, you need to confirm your email address via the email we just sent to you.', 'ffw' );
+		}
+
+		/**
+		 * Get called on Checkout page when user is non login
+		 *
+		 * Support WooCommerce
+		 *
+		 * @since 1.0.0
+		 */
+		function woocommerce_create_account_process() {
 
 			if ( ! is_user_logged_in() && $this->ffm_woocommerce_change_checkout_process() ) {
 				/**
@@ -50,11 +87,6 @@ if ( ! class_exists( 'FFW_WooCommerce_Checkout_With_BuddyPress' ) ) {
 				 * Unset the User role of the user that is getting create via WooCommerce checkout Page
 				 */
 				add_filter( 'woocommerce_new_customer_data', array( $this, 'woocommerce_new_customer_data' ) );
-
-				/**
-				 * Do not allow the BuddyPress create account function to add nen user just add the Activation key for the user
-				 */
-				add_filter( 'bp_core_signups_do_not_skip_user_creation', '__return_false', 100 );
 
 				/**
 				 * Disable new account creating Email on Checkout page

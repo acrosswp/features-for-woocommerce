@@ -42,8 +42,13 @@ if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
 		 */
 		public function woocommerce_update_coupon( $post_id ) {
 
-			$defer_apply = isset( $_POST['_ffw_hide_coupon'] ) ? sanitize_text_field( $_POST['_ffw_hide_coupon'] ) : '';
-			update_post_meta( $post_id, '_ffw_hide_coupon', $defer_apply );
+			$nonce_value = isset( $_POST['_wpnonce'] ) ? wp_unslash( $_POST['_wpnonce'] ) : '';
+			$nonce_value = isset( $_POST['ffw-hide-coupon-nonce'] ) ? wp_unslash( $_POST['ffw-hide-coupon-nonce'] ) : $nonce_value;
+			if ( wp_verify_nonce( $nonce_value, 'ffw-hide-coupon' ) ) {
+				$defer_apply = isset( $_POST['_ffw_hide_coupon'] ) ? sanitize_text_field( $_POST['_ffw_hide_coupon'] ) : '';
+				update_post_meta( $post_id, '_ffw_hide_coupon', $defer_apply );
+			}
+
 
 		}
 
@@ -66,6 +71,9 @@ if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
 				'description' => __( "Check this box to Hide the Coupon code.", 'ffw' ),
 				'value'       => $value,
 			) );
+
+
+			wp_nonce_field( 'ffw-hide-coupon', 'ffw-hide-coupon-nonce' );
 
 		}
 
