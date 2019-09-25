@@ -1,4 +1,4 @@
-=== Hide Coupon Name for WooCommerce ===
+=== Features for WooCommerce ===
 Contributors: raftaar1191
 Donate link: https://raftaar1191.com/
 Tags: WooCommerce, Coupon, WordPress

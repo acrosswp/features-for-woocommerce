@@ -1,6 +1,6 @@
-# Hide Coupon Name for WooCommerce #
+# Features for WooCommerce #
 
-Add setting into the Dashboard Create Coupon fields where we can click on option to show or hide the Coupon code into the Frontend
+This plugin provided a extra features for WooCommerce
 
 
 * **Contributors:** [raftaar1191](http://profiles.wordpress.org/raftaar1191),
@@ -10,12 +10,12 @@ Add setting into the Dashboard Create Coupon fields where we can click on option
 
 ## Description ##
 
-Add setting into the Dashboard Create Coupon fields where we can click on option to show or hide the Coupon code into the Frontend
+This plugin provided a extra features for WooCommerce
 
 ## Installation ##
 
-* Install the plugin from the 'Plugins' section in your dashboard (Go to `Plugins > Add New > Search` and search for Hide Coupon Name for WooCommerce).
-* Alternatively, you can [download](http://downloads.wordpress.org/plugin/features-for-woocommerce.zip "Download Hide Coupon Name for WooCommerce") the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (`wp-content/plugins/` directory of your WordPress installation).
+* Install the plugin from the 'Plugins' section in your dashboard (Go to `Plugins > Add New > Search` and search for Features for WooCommerce).
+* Alternatively, you can [download](http://downloads.wordpress.org/plugin/features-for-woocommerce.zip "Download Features for WooCommerce") the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (`wp-content/plugins/` directory of your WordPress installation).
 * Activate it through the 'Plugins' section.
 
 ## Screenshots/Video ##
