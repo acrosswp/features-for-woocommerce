@@ -15,7 +15,7 @@ Add setting into the Dashboard Create Coupon fields where we can click on option
 ## Installation ##
 
 * Install the plugin from the 'Plugins' section in your dashboard (Go to `Plugins > Add New > Search` and search for Hide Coupon Name for WooCommerce).
-* Alternatively, you can [download](http://downloads.wordpress.org/plugin/hide-coupon-name-for-woocommerce.zip "Download Hide Coupon Name for WooCommerce") the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (`wp-content/plugins/` directory of your WordPress installation).
+* Alternatively, you can [download](http://downloads.wordpress.org/plugin/features-for-woocommerce.zip "Download Hide Coupon Name for WooCommerce") the plugin from the repository. Unzip it and upload it to the plugins folder of your WordPress installation (`wp-content/plugins/` directory of your WordPress installation).
 * Activate it through the 'Plugins' section.
 
 ## Screenshots/Video ##
