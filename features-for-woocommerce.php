@@ -44,14 +44,35 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 	 * Load the Feature_For_WooCommeerce class
 	 */
 	class Feature_For_WooCommeerce {
+
+		public $buddypress = '';
+
+		public $default_options = array();
+
 		public function __construct() {
+			$this->helper();
 			$this->language();
 			$this->hooks();
 			$this->loader();
 		}
 
-		public function hooks() {
+		public function helper() {
+			$this->buddypress = class_exists( 'buddypress' ) ? true : false;
 
+			$this->default_options = array(
+				'ffw_hide_coupon_code'         => 'yes',
+				'ffw_checkout_with_buddypress' => 'yes',
+			);
+		}
+
+		public function hooks() {
+			add_filter( 'woocommerce_get_settings_pages', array( $this, 'ffm_settings_pages' ) );
+		}
+
+		public function ffm_settings_pages( $settings ) {
+			$settings[] = include FFW_PLUGIN_DIR . 'includes/settings.php';
+
+			return $settings;
 		}
 
 		public function language() {
@@ -63,5 +84,5 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 		}
 	}
 
-	$GLOBALS['ffm'] = new Feature_For_WooCommeerce();
+	$GLOBALS['ffw'] = new Feature_For_WooCommeerce();
 }

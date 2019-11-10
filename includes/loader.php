@@ -5,8 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// include the hide coupon class
-require_once FFW_PLUGIN_DIR . 'includes/hide-coupon.php';
+/**
+ * Class FFW_Loader
+ */
+class FFW_Loader {
 
+	public function __construct() {
 
-require_once FFW_PLUGIN_DIR . 'includes/account-creation/checkout/checkout-account-creation.php';
+	}
+}
