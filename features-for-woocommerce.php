@@ -59,11 +59,6 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 
 		public function helper() {
 			$this->buddypress = class_exists( 'buddypress' ) ? true : false;
-
-			$this->default_options = array(
-				'ffw_hide_coupon_code'         => 'yes',
-				'ffw_checkout_with_buddypress' => 'yes',
-			);
 		}
 
 		public function hooks() {

@@ -15,7 +15,7 @@ if ( ! class_exists( 'FFW_Hide_Coupon_Code' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
-	class FFW_Hide_Coupon {
+	class FFW_Hide_Coupon_Code {
 
 		// Constructor
 		public function __construct() {
