@@ -5,7 +5,7 @@ Tags: WooCommerce, BuddyPress, WordPress, Coupon
 Requires at least: 4.9
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,9 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+
+= 2.0.2 =
+Update Changelog
 
 = 2.0.1 =
 Update Changelog
