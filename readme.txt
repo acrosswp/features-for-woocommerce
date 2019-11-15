@@ -2,12 +2,12 @@
 Contributors: raftaar1191
 Donate link: https://raftaar1191.com/
 Tags: WooCommerce, BuddyPress, WordPress, Coupon
-Requires at least: 4.6
-Tested up to: 4.7
-Stable tag: 4.3
+Requires at least: 4.9
+Tested up to: 5.2
 Requires PHP: 5.6
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 2.0.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Add setting into the Dashboard Create Coupon fields where we can click on option to show or hide the Coupon code into the Frontend
 
