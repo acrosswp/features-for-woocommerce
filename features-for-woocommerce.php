@@ -48,6 +48,7 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 
 		public $buddypress = '';
 
+
 		public $default_options = array();
 
 		public function __construct() {
