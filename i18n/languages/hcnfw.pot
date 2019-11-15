@@ -14,38 +14,62 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/hide-coupon.php:65
-msgid "Hide Coupon"
+#: includes/functions.php:17
+msgid "Enable Hide Coupon Code"
 msgstr ""
 
-#: includes/hide-coupon.php:66
-msgid "Check this box to Hide the Coupon code."
+#: includes/functions.php:18, includes/functions.php:22
+msgid "Give Admin user option to hide the coupon code"
 msgstr ""
 
-#: includes/hide-coupon.php:85
-msgid "Discount Applied"
+#: includes/functions.php:25
+msgid "Enable BuddyPress Account Creation"
 msgstr ""
 
-#: includes/account-creation/checkout/checkout-account-creation.php:28
+#: includes/functions.php:26
+msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgstr ""
+
+#: includes/functions.php:30
+msgid "Give Admin user option to enable login like BuddyPress does"
+msgstr ""
+
+#: includes/settings.php:24
+msgid "Features for WooCommerce"
+msgstr ""
+
+#: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:71
 msgid "Before you can login, you need to confirm your email address via the email we just sent to you."
 msgstr ""
 
-#: includes/account-creation/checkout/checkout-account-creation.php:102
+#: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:147
 msgid "Your username has been automatically generated:"
 msgstr ""
 
-#: includes/account-creation/checkout/checkout-account-creation.php:115
+#: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:160
 msgid "Your password has been automatically generated:"
 msgstr ""
 
-#: includes/account-creation/checkout/checkout-account-creation.php:131
+#: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:176
 msgid ""
 "\n"
 "Your username has been automatically generated: %s"
 msgstr ""
 
-#: includes/account-creation/checkout/checkout-account-creation.php:142
+#: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:187
 msgid ""
 "\n"
 "Your password has been automatically generated: %s"
+msgstr ""
+
+#: includes/ffw_hide_coupon_code/ffw_hide_coupon_code.php:70
+msgid "Hide Coupon"
+msgstr ""
+
+#: includes/ffw_hide_coupon_code/ffw_hide_coupon_code.php:71
+msgid "Check this box to Hide the Coupon code."
+msgstr ""
+
+#: includes/ffw_hide_coupon_code/ffw_hide_coupon_code.php:92
+msgid "Discount Applied"
 msgstr ""

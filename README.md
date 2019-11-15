@@ -33,6 +33,10 @@ This plugin provided a extra features for WooCommerce
 
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
+## Description ##
+
+npm run-script build 
+
 
 ## Changelog ##
 

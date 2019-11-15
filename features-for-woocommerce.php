@@ -5,7 +5,7 @@
  * Description: This plugin provided a extra features for WooCommerce
  * Author:      raftaar1191
  * Author URI:  https://profiles.wordpress.org/raftaar1191/
- * Version:     1.0.0
+ * Version:     2.0.0
  * Text Domain: ffw
  * Domain Path: /i18n/languages/
  */
