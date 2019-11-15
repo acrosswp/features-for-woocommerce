@@ -40,5 +40,11 @@ npm run-script build
 
 ## Changelog ##
 
+### 2.0.1 ###
+   * Update Changelog
+   
+### 2.0.0 ###
+   * Add setting to disable feature from Dashboard
+
 ### 1.0.0 [Sep 01, 2019] ###
    * Add Plugin to Hide WooCommerce Coupon Name

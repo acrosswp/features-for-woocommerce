@@ -40,5 +40,11 @@ https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
 
+= 2.0.1 =
+Update Changelog
+
+= 2.0.0 =
+Add setting to disable feature from Dashboard
+
 = 1.0.0 =
 * Add Plugin to Hide WooCommerce Coupon Name
