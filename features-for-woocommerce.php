@@ -40,8 +40,9 @@ if ( ! defined( 'FFW_PLUGIN_BASENAME' ) ) {
 if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 	/**
 	 * Class Feature_For_WooCommeerce
-	 *
 	 * Load the Feature_For_WooCommeerce class
+	 *
+	 * Version:     1.0.0
 	 */
 	class Feature_For_WooCommeerce {
 
@@ -80,6 +81,7 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 		}
 
 		public function loader() {
+			require_once FFW_PLUGIN_DIR . 'includes/functions.php';
 			require_once FFW_PLUGIN_DIR . 'includes/loader.php';
 		}
 	}

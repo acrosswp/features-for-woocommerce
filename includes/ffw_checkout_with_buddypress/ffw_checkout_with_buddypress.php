@@ -2,14 +2,17 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
-if ( ! class_exists( 'FFW_WooCommerce_Checkout_With_BuddyPress' ) ) {
+if ( ! class_exists( 'FFW_Checkout_With_Buddypress' ) ) {
 	class FFW_WooCommerce_Checkout_With_BuddyPress {
 		public function __construct() {
 
 			// check if buddypress or buddyboss platform plugin exists
 			if ( class_exists( 'buddypress' ) ) {
 				add_action( 'woocommerce_checkout_process', array( $this, 'woocommerce_create_account_process' ) );
-				add_filter( 'woocommerce_thankyou_order_received_text', array( $this, 'woocommerce_thankyou_order_received_text' ), 100, 3 );
+				add_filter( 'woocommerce_thankyou_order_received_text', array(
+					$this,
+					'woocommerce_thankyou_order_received_text'
+				), 100, 3 );
 				add_filter( 'woocommerce_register_form', array( $this, 'register_form' ), 0 );
 				add_action( 'wp_loaded', array( $this, 'process_registration' ), 10 );
 			}

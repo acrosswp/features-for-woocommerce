@@ -1,16 +1,19 @@
 <?php
+
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
 // check if class does not exits
-if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
+if ( ! class_exists( 'FFW_Hide_Coupon_Code' ) ) {
 
 	/**
 	 * Class FFW_Hide_Coupon
-	 *
 	 * Feature to Hide the Coupon Code
+	 *
+	 * @since 1.0.0
 	 */
 	class FFW_Hide_Coupon {
 
@@ -27,10 +30,7 @@ if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
 		public function woocommerce_helper_loaded() {
 			add_action( 'woocommerce_update_coupon', array( $this, 'woocommerce_update_coupon' ), 10 );
 			add_action( 'woocommerce_coupon_options', array( $this, 'woocommerce_coupon_options' ), 10, 2 );
-			add_filter( 'woocommerce_cart_totals_coupon_label', array(
-				$this,
-				'woocommerce_cart_totals_coupon_label'
-			), 10, 2 );
+			add_filter( 'woocommerce_cart_totals_coupon_label', array( $this, 'woocommerce_cart_totals_coupon_label' ), 10, 2 );
 		}
 
 		/**
@@ -72,7 +72,6 @@ if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
 				'value'       => $value,
 			) );
 
-
 			wp_nonce_field( 'ffw-hide-coupon', 'ffw-hide-coupon-nonce' );
 
 		}
@@ -97,5 +96,5 @@ if ( ! class_exists( 'FFW_Hide_Coupon' ) ) {
 		}
 	}
 
-	$GLOBALS['ffm_hide_coupon'] = new FFW_Hide_Coupon();
+	$GLOBALS['ffm_hide_coupon'] = new FFW_Hide_Coupon_Code();
 }
