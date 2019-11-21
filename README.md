@@ -5,7 +5,7 @@
 **Requires at least:** 4.9
 **Tested up to:** 5.3
 **Requires PHP:** 5.6
-**Stable tag:** 2.0.3
+**Stable tag:** 2.0.4
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,10 @@ npm run-script build
 
 
 ## Changelog ##
+
+### 2.0.4 ###
+   * Add Plugin Setting Link
+   
 ### 2.0.3 ###
    * Add setting to update product quantity in checkout single page
    

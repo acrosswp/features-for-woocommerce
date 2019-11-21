@@ -33,11 +33,11 @@ function ffm_settings_fields() {
 			'title'             => __( 'Enable BuddyPress Account Creation', 'ffw' ),
 			'desc'              => __( 'Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress', 'ffw' ),
 			'id'                => 'ffw_checkout_with_buddypress',
-			'default'           => 'yes',
+			'default'           => 'no',
 			'type'              => 'checkbox',
 			'desc_tip'          => __( 'Give Admin user option to enable login like BuddyPress does', 'ffw' ),
 			'custom_attributes' => array(
-				empty( $GLOBALS['ffw']->buddypress ) ? 'disabled' : '' => '',
+				class_exists( 'buddypress' ) ? '' : 'disabled' => '',
 			),
 		),
 	);
