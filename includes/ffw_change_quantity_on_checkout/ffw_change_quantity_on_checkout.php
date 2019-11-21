@@ -3,12 +3,22 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
+	/**
+	 * Class FFW_Change_Quantity_On_Checkout
+	 * Update price on WooCommeere checkout page or via using WooCommerce Shortcode
+	 *
+	 */
 	class FFW_Change_Quantity_On_Checkout {
-		public function __construct() {
-			add_filter( 'woocommerce_checkout_cart_item_quantity', array( $this, 'quantity_change_dropdown' ), 10, 20 );
 
+		public function __construct() {
+			add_action( 'woocommerce_checkout_init', array( $this, 'woocommerce_checkout_init' ), 1 );
 			add_action( 'wp_ajax_nopriv_ffw_change_quantity_on_checkout', array( $this, 'update_checkout_order' ) );
 			add_action( 'wp_ajax_ffw_change_quantity_on_checkout', array( $this, 'update_checkout_order' ) );
+		}
+
+		public function woocommerce_checkout_init() {
+			wp_enqueue_script( 'ffw_frontend' );
+			add_filter( 'woocommerce_checkout_cart_item_quantity', array( $this, 'quantity_change_dropdown' ), 10, 3 );
 		}
 
 		public function update_checkout_order() {
@@ -29,7 +39,10 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 						if ( $cart_key == $cart_item_key ) {
 							$product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 							if ( ! $product->is_sold_individually() ) {
-								if ( $product->get_max_purchase_quantity() >= $cart_value['qty'] ) {
+								if (
+									$product->get_max_purchase_quantity() < 0
+									|| $product->get_max_purchase_quantity() >= $cart_value['qty']
+								) {
 									WC()->cart->set_quantity( $cart_key, $cart_value['qty'], false );
 									WC()->cart->calculate_totals();
 								} else {
@@ -56,27 +69,20 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 		 * @return mixed
 		 */
 		public function quantity_change_dropdown( $html, $cart_item, $cart_item_key ) {
-			/**
-			 * Only run on checkout page
-			 */
-			if ( is_checkout() ) {
 
-				wp_enqueue_script( 'ffw_frontend' );
-
-				$product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-				if ( ! $product->is_sold_individually() ) {
-					$html = woocommerce_quantity_input(
-						array(
-							'input_name'   => "cart[{$cart_item_key}][qty]",
-							'input_value'  => $cart_item['quantity'],
-							'max_value'    => $product->get_max_purchase_quantity(),
-							'min_value'    => '0',
-							'product_name' => $product->get_name(),
-						),
-						$product,
-						false
-					);
-				}
+			$product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+			if ( ! $product->is_sold_individually() ) {
+				$html = woocommerce_quantity_input(
+					array(
+						'input_name'   => "cart[{$cart_item_key}][qty]",
+						'input_value'  => $cart_item['quantity'],
+						'max_value'    => $product->get_max_purchase_quantity(),
+						'min_value'    => '0',
+						'product_name' => $product->get_name(),
+					),
+					$product,
+					false
+				);
 			}
 
 			return $html;
