@@ -9,7 +9,7 @@ Stable tag: 2.0.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Add setting into the WooCommerce Setting tab to Enable or Disable Multiipal feature Like:
+Add setting into the WooCommerce Setting tab to Enable or Disable Multiple feature Like:
 Hide Coupon Code
 Change Quantity on Checkout Page
 BuddyPress Account Creation
@@ -17,9 +17,9 @@ BuddyPress Account Creation
 == Description ==
 
 Add setting into the WooCommerce Setting tab to Enable or Disable Multiipal feature Like:
-Hide Coupon Code
-Change Quantity on Checkout Page
-BuddyPress Account Creation
+1. Hide Coupon Code
+2. Change Quantity on Checkout Page
+3. BuddyPress Account Creation
 
 
 == Installation ==
@@ -29,9 +29,9 @@ This section describes how to install the plugin and get it working.
 e.g.
 
 1. Upload the plugin files to the `/wp-content/plugins/features-for-woocommerce` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Use the Settings->Plugin Name screen to configure the plugin
-1. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Use the Settings->Plugin Name screen to configure the plugin
+4. (Make your instructions match the desired user flow for activating and installing your plugin. Include any steps that might be needed for explanatory purposes)
 
 
 == Frequently Asked Questions ==
@@ -45,6 +45,8 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+= 2.0.5 =
+* Add setting to remove products from checkout page
 
 = 2.0.4 =
 Add Plugin Setting Link

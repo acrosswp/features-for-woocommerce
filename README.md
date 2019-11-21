@@ -39,6 +39,8 @@ npm run-script build
 
 
 ## Changelog ##
+### 2.0.5 ###
+   * Add setting to remove products from checkout page
 
 ### 2.0.4 ###
    * Add Plugin Setting Link

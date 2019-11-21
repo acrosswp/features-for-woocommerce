@@ -11,7 +11,7 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 	class FFW_Change_Quantity_On_Checkout {
 
 		public function __construct() {
-			add_action( 'woocommerce_checkout_init', array( $this, 'woocommerce_checkout_init' ), 1 );
+			add_action( 'woocommerce_checkout_init', array( $this, 'woocommerce_checkout_init' ), 20 );
 			add_action( 'wp_ajax_nopriv_ffw_change_quantity_on_checkout', array( $this, 'update_checkout_order' ) );
 			add_action( 'wp_ajax_ffw_change_quantity_on_checkout', array( $this, 'update_checkout_order' ) );
 		}
@@ -72,7 +72,8 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 
 			$product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 			if ( ! $product->is_sold_individually() ) {
-				$html = woocommerce_quantity_input(
+
+				$new_html = woocommerce_quantity_input(
 					array(
 						'input_name'   => "cart[{$cart_item_key}][qty]",
 						'input_value'  => $cart_item['quantity'],
@@ -83,6 +84,8 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 					$product,
 					false
 				);
+
+				$html = apply_filters( 'ffw_change_quantity_on_checkout_dropbox', false ) ? $html . $new_html : $new_html;
 			}
 
 			return $html;

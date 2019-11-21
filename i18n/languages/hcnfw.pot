@@ -35,14 +35,26 @@ msgid "Give users option to update quantity on checkout page"
 msgstr ""
 
 #: includes/functions.php:33
-msgid "Enable BuddyPress Account Creation"
+msgid "Remove Product on Checkout Page"
 msgstr ""
 
 #: includes/functions.php:34
-msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgid "Give user option to button to remove product on checkout page"
 msgstr ""
 
 #: includes/functions.php:38
+msgid "Give users option to remove product on checkout page"
+msgstr ""
+
+#: includes/functions.php:41
+msgid "Enable BuddyPress Account Creation"
+msgstr ""
+
+#: includes/functions.php:42
+msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgstr ""
+
+#: includes/functions.php:46
 msgid "Give Admin user option to enable login like BuddyPress does"
 msgstr ""
 
