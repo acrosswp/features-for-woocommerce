@@ -50,7 +50,7 @@ msgstr ""
 msgid "Features for WooCommerce"
 msgstr ""
 
-#: includes/ffw_change_quantity_on_checkout/ffw_change_quantity_on_checkout.php:17
+#: includes/ffw_change_quantity_on_checkout/ffw_change_quantity_on_checkout.php:27
 msgid "Something when wrong kindly try after sometime"
 msgstr ""
 
