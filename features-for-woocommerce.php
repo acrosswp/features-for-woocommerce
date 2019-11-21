@@ -31,6 +31,11 @@ if ( ! defined( 'FFW_PLUGIN_DIR' ) ) {
 	define( 'FFW_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 }
 
+// URL
+if ( ! defined( 'FFW_PLUGIN_URL' ) ) {
+	define( 'FFW_PLUGIN_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+}
+
 // Plugin Basename
 if ( ! defined( 'FFW_PLUGIN_BASENAME' ) ) {
 	define( 'FFW_PLUGIN_BASENAME', plugin_basename( FFW_PLUGIN_DIR ) );
@@ -54,8 +59,8 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 		public function __construct() {
 			$this->helper();
 			$this->language();
-			$this->hooks();
 			$this->loader();
+			$this->hooks();
 		}
 
 		public function helper() {
@@ -64,6 +69,24 @@ if ( ! class_exists( 'Feature_For_WooCommeerce' ) ) {
 
 		public function hooks() {
 			add_filter( 'woocommerce_get_settings_pages', array( $this, 'ffm_settings_pages' ) );
+
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_script' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_script' ) );
+		}
+
+		/**
+		 * Add script
+		 *
+		 * @since 2.0.3
+		 */
+		public function enqueue_script() {
+
+			if ( is_admin() ) {
+				wp_register_script( 'ffw_admin', FFW_PLUGIN_URL . 'assets/js/admin.js', 'jquery', FFW_PLUGIN_VERSION, true );
+
+			}
+
+			wp_register_script( 'ffw_frontend', FFW_PLUGIN_URL . 'assets/js/frontend.js', 'jquery', FFW_PLUGIN_VERSION, true );
 		}
 
 		public function ffm_settings_pages( $settings ) {

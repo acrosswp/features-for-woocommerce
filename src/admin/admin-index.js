@@ -3,7 +3,6 @@
  *
  * src/admin/admin-index.js
  */
-const admin = require( './components/admin-test' );
+require( './components/admin' );
 
-// Lets test!
-admin.log( 'This is a message to the admin!!!!' );
+// Contain admin index code
