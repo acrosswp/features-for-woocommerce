@@ -50,6 +50,10 @@ msgstr ""
 msgid "Features for WooCommerce"
 msgstr ""
 
+#: includes/ffw_change_quantity_on_checkout/ffw_change_quantity_on_checkout.php:17
+msgid "Something when wrong kindly try after sometime"
+msgstr ""
+
 #: includes/ffw_checkout_with_buddypress/ffw_checkout_with_buddypress.php:71
 msgid "Before you can login, you need to confirm your email address via the email we just sent to you."
 msgstr ""

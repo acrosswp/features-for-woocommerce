@@ -3,6 +3,6 @@
  *
  * src/admin/admin-index.js
  */
-require( './components/admin-test' );
+require( './components/admin' );
 
 // Contain admin index code
