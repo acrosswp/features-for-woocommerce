@@ -23,14 +23,26 @@ msgid "Give Admin user option to hide the coupon code"
 msgstr ""
 
 #: includes/functions.php:25
-msgid "Enable BuddyPress Account Creation"
+msgid "Change Quantity on Checkout Page"
 msgstr ""
 
 #: includes/functions.php:26
-msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgid "Give user option to update quantity on checkout page"
 msgstr ""
 
 #: includes/functions.php:30
+msgid "Give users option to update quantity on checkout page"
+msgstr ""
+
+#: includes/functions.php:33
+msgid "Enable BuddyPress Account Creation"
+msgstr ""
+
+#: includes/functions.php:34
+msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgstr ""
+
+#: includes/functions.php:38
 msgid "Give Admin user option to enable login like BuddyPress does"
 msgstr ""
 

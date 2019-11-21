@@ -22,6 +22,14 @@ function ffm_settings_fields() {
 			'desc_tip' => __( 'Give Admin user option to hide the coupon code', 'ffw' ),
 		),
 		array(
+			'title'             => __( 'Change Quantity on Checkout Page', 'ffw' ),
+			'desc'              => __( 'Give user option to update quantity on checkout page', 'ffw' ),
+			'id'                => 'ffw_change_quantity_on_checkout',
+			'default'           => 'yes',
+			'type'              => 'checkbox',
+			'desc_tip'          => __( 'Give users option to update quantity on checkout page', 'ffw' ),
+		),
+		array(
 			'title'             => __( 'Enable BuddyPress Account Creation', 'ffw' ),
 			'desc'              => __( 'Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress', 'ffw' ),
 			'id'                => 'ffw_checkout_with_buddypress',
