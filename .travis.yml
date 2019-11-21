@@ -1,86 +1,73 @@
-language: php
 dist: xenial
-
-# Since Xenial services are not started by default, we need to instruct it below to start.
-services:
-- xvfb
-- mysql
-
-sudo: false
-
-cache:
-  directories:
-  - vendor
-  - $HOME/.composer/cache
-
-# Test main supported versions of PHP against latest WP.
+language: php
+sudo: required
 php:
-- 5.6
-- 7.0
 - 7.1
-- 7.2
-- 7.3
-
-env:
-- WP_VERSION=latest WP_MULTISITE=0
-
-# Additional tests against stable PHP (min version is 5.6)
-# and code coverage report.
-matrix:
-  fast_finish: true
-  include:
-  - name: "Coding standard check"
-    php: 7.2
-    env: WP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1
-  - name: "e2e tests"
-    php: 7.2
-    env: WP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
-    addons:
-      chrome: beta
-      apt:
-        packages:
-        - nginx
-  - name: "Unit tests code coverage"
-    php: 7.3
-    env: WP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
-  - name: "WooCommerce unit tests using WordPress nightly"
-    php: 7.3
-    env: WP_VERSION=nightly WP_MULTISITE=0
-  - php: 7.4snapshot
-    env: WP_VERSION=nightly WP_MULTISITE=0
-  allow_failures:
-  - php: 7.3
-    env: WP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
-
-before_script:
-- export PATH="$HOME/.composer/vendor/bin:$PATH"
-- |
-  # Remove Xdebug for a huge performance increase:
-  if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
-    phpenv config-rm xdebug.ini
-  else
-    echo "xdebug.ini does not exist"
-  fi
-- composer install --no-dev
-- |
-  # Install WP Test suite, install PHPUnit globally:
-  if [[ ! -z "$WP_VERSION" ]]; then
-    bash tests/bin/install.sh woocommerce_test root '' localhost $WP_VERSION
-    composer global require "phpunit/phpunit=5.7.*|7.5.*"
-  fi
-- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-
-script:
-- bash tests/bin/phpunit.sh
-- bash tests/bin/phpcs.sh
-- travis_retry bash tests/bin/run-e2e-CI.sh
-
-after_script:
-- bash tests/bin/travis.sh after
-
-# Specifies that Travis should create builds for master and release branches and also tags.
 branches:
   only:
   - master
-  - /^\d+\.\d+(\.\d+)?(-\S*)?$/
-  - /^release\//
+  - develop
+  - pre-release-travis-test
+  - pre-release
+  # - codeception
+
+before_install:
+- rm -rf ~/.gnupg
+- sudo apt-get install xvfb
+
+before_script:
+
+- export PLUGIN_DIR=$(pwd)
+- sudo rm -rf /etc/mysql/
+- sudo rm -rf /var/lib/mysql/
+- sudo apt-get -qq purge mysql* graphviz*
+- sudo apt-get --purge remove mysql-server
+- sudo apt-get --purge remove mysql-client
+- sudo apt-get --purge remove mysql-common
+- sudo apt-get autoremove
+- sudo apt-get autoclean
+- sudo bash -c 'echo -e "[user]\n\tname = abc\n\temail = root@localhost.com" > /home/travis/.gitconfig'
+- wget -qO ee rt.cx/ee && sudo bash ee
+- sudo ee stack install --nginx
+- sudo ee stack install --web
+- sudo wp --yes --allow-root cli update --nightly
+- sudo ee site create automation.features-for-woocommerce.me --wp --user=ADMINUSER --email=raftaar1191@gmail.com --pass=ADMINPASS
+- sudo sed -i '/^127.0.0.1/ s/$/ automation.features-for-woocommerce.me/' /etc/hosts
+- sudo chmod 777 -R /var/www
+- cd /var/www/automation.features-for-woocommerce.me/htdocs/wp-content/plugins/ && mkdir features-for-woocommerce
+- cd $PLUGIN_DIR
+- cp -Rf * /var/www/automation.features-for-woocommerce.me/htdocs/wp-content/plugins/features-for-woocommerce/
+- cd /var/www/automation.features-for-woocommerce.me/htdocs/
+- wp --allow-root plugin install https://downloads.wordpress.org/plugin/woocommerce.zip
+- wp plugin activate --all
+- cd $PLUGIN_DIR
+# - composer update
+- composer install
+- export PATH="$PATH:/home/travis/build/features-for-woocommerceWP/features-for-woocommerce/tests/codeception/vendor/bin"
+## PHP_CodeSniffer
+- git clone https://github.com/squizlabs/PHP_CodeSniffer.git
+- cd PHP_CodeSniffer
+- pear install package.xml
+- cd ../
+- git clone git://github.com/wimg/PHPCompatibility.git $(pear config-get php_dir)/PHP/CodeSniffer/Standards/PHPCompatibility
+- phpenv rehash
+- phpcs -i
+- phpenv rehash
+- phpcs --config-set installed_paths $(pear config-get php_dir)/PHP/CodeSniffer/Standards
+- phpcs --config-set installed_paths $(pear config-get php_dir)/PHP/CodeSniffer/Standards/PHPCompatibility
+- phpcs -i
+- phpcs --config-set error_severity 0
+- phpcs --config-set warning_severity 0
+
+script:
+## PHP_CodeSniffer
+- phpcs --standard=PHPCompatibility --runtime-set testVersion 5.3-5.5 $(find ./tests/acceptance -name '*.php')
+- if find . -name "*.php" ! -path "./node_modules/*" ! -path "./vendor/*" -exec php -l {} 2>&1 \; | grep "syntax error, unexpected"; then exit 1; fi
+- codecept run acceptance --steps
+
+after_script:
+- sudo cat /var/log/ee/ee.log
+
+#notifications:
+#  slack:
+#    secure: E9tbxOZ/n4Gcwi8SiCKQ5QVw+5AfwdTq4e/VG4epQF74IqXmJJvaJgQSVKLSVXJm4O1u8JHd+ffN1Xheh1FDaKkscuJYQcT4D+oOc40bHhb0tS71v1fAMzMX7NuyqgEu2a8dbYo7bqVKtdj/EBbOPWnwgfMuA6ylTItVf294spA=
