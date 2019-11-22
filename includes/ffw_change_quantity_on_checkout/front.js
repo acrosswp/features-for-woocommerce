@@ -1,5 +1,5 @@
 jQuery( document ).ready( function ( $ ) {
-	jQuery( 'body.woocommerce-checkout form.woocommerce-checkout' ).on( 'change', 'input.qty', function () {
+	jQuery( 'body.woocommerce-checkout form.woocommerce-checkout' ).on( 'change', 'input.ffw-qty', function () {
 		// This does the ajax request
 		$.ajax( {
 			url: woocommerce_params.ajax_url, // or example_ajax_obj.ajaxurl if using on frontend

@@ -16,6 +16,7 @@ if ( ! class_exists( 'FFW_Remove_Product_On_Checkout' ) ) {
 		}
 
 		public function woocommerce_checkout_init() {
+			wp_enqueue_script( 'ffw_frontend' );
 			add_filter( 'woocommerce_checkout_cart_item_quantity', array( $this, 'remove_product_button' ), 10, 3 );
 		}
 

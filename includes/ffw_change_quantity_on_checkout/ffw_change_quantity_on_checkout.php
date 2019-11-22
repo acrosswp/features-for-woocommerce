@@ -80,6 +80,7 @@ if ( ! class_exists( 'FFW_Change_Quantity_On_Checkout' ) ) {
 						'max_value'    => $product->get_max_purchase_quantity(),
 						'min_value'    => '0',
 						'product_name' => $product->get_name(),
+						'classes' => array( 'input-text', 'qty', 'text', 'ffw-qty' ),
 					),
 					$product,
 					false

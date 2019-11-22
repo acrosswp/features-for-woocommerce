@@ -38,6 +38,14 @@ function ffm_settings_fields() {
 			'desc_tip' => __( 'Give users option to remove product on checkout page', 'ffw' ),
 		),
 		array(
+			'title'    => __( 'Update Product price on the fly', 'ffw' ),
+			'desc'     => __( 'Update Product price when user change the product quantity', 'ffw' ),
+			'id'       => 'ffw_update_product_price_on_the_fly',
+			'default'  => 'yes',
+			'type'     => 'checkbox',
+			'desc_tip' => __( 'Show users exact price when user update product quantity', 'ffw' ),
+		),
+		array(
 			'title'             => __( 'Enable BuddyPress Account Creation', 'ffw' ),
 			'desc'              => __( 'Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress', 'ffw' ),
 			'id'                => 'ffw_checkout_with_buddypress',
