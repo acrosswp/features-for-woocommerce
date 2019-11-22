@@ -39,6 +39,9 @@ npm run-script build
 
 
 ## Changelog ##
+### 2.0.6 ###
+   * Update product price on the fly in product single page
+   
 ### 2.0.5 ###
    * Add setting to remove products from checkout page
 
