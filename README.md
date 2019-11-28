@@ -1,11 +1,11 @@
 # Language Fallback #
 **Contributors:** raftaar1191
 **Donate link:** https://raftaar1191.com/
-**Tags:** WooCommerce, BuddyPress, WordPress, Coupon
+**Tags:** Features For WooCommerce, Hide Coupon Code, Change Quantity on Checkout Page, Remove Product on Checkout Page, Update Product price on the Fly, Exclude Product from all the Coupon, Coupon, Checkout, WooCommerce Change Quantity
 **Requires at least:** 4.9
 **Tested up to:** 5.3
 **Requires PHP:** 5.6
-**Stable tag:** 2.0.10
+**Stable tag:** 2.0.11
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,7 +39,10 @@ npm run-script build
 
 
 ## Changelog ##
-### 2.0.9 ###
+### 2.0.10 ###
+   * Update Tags
+   
+### 2.0.10 ###
    * Add setting to exclude products from all the coupon code
 
 ### 2.0.9 ###
