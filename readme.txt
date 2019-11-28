@@ -5,7 +5,7 @@ Donate link: https://raftaar1191.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.12
+Stable tag: 2.0.13
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,11 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+= 2.0.13 =
+Update Tags
+
+= 2.0.12 =
+Update Tags
 
 = 2.0.11 =
 Update Tags
