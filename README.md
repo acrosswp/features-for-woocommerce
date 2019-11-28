@@ -1,13 +1,16 @@
 # Language Fallback #
-**Contributors:** raftaar1191
-**Tags:** features for woo commerce, features for woo, hide coupon code, change quantity on checkout page, remove product on checkout page, update product price on the fly, exclude product from all the coupon, coupon, checkout, quantity change for woo commerce, ecommerce, e-commerce, woo
 **Donate link:** https://raftaar1191.com/
-**Requires at least:** 4.9
-**Tested up to:** 5.3
 **Requires PHP:** 5.6
-**Stable tag:** 2.0.15
 **License:** GPLv3
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
+
+---
+
+👉🏻 Not a developer? Running WordPress? [Download Features for WooCommerce](https://wordpress.org/plugins/features-for-woocommerce/) on WordPress.org.
+
+![WordPress version](https://img.shields.io/wordpress/plugin/v/features-for-woocommerce.svg) ![WordPress Rating](https://img.shields.io/wordpress/plugin/r/features-for-woocommerce.svg) ![WordPress Downloads](https://img.shields.io/wordpress/plugin/dt/features-for-woocommerce.svg) 
+
+Welcome to the FFW GitHub repository. This is the core repository and heart of an ecosystem of active development. Here you can browse the source, look at open issues, and contribute to the project.
 
 # Features for WooCommerce #
 
@@ -36,59 +39,3 @@ https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 ## Description ##
 
 npm run-script build 
-
-
-## Changelog ##
-
-### 2.0.10 ###
-   * Add setting to exclude products from all the coupon code
-   * Update Changelog
-   * Fix only the Fly variable product issue
-
-### 2.0.14 ###
-   * Update Tags
-
-### 2.0.13 ###
-   * Update Tags
-   
-### 2.0.12 ###
-  * Update Tags
-  
-### 2.0.11 ###
-   * Update Tags
-   
-### 2.0.10 ###
-   * Add setting to exclude products from all the coupon code
-
-### 2.0.9 ###
-   * Update Changelog
-
-### 2.0.8 ###
-   * Update Changelog
-
-### 2.0.7 ###
-   * Update Changelog
-   
-### 2.0.6 ###
-   * Update product price on the fly in product single page
-   
-### 2.0.5 ###
-   * Add setting to remove products from checkout page
-
-### 2.0.4 ###
-   * Add Plugin Setting Link
-   
-### 2.0.3 ###
-   * Add setting to update product quantity in checkout single page
-   
-### 2.0.2 ###
-   * Update Changelog
-
-### 2.0.1 ###
-   * Update Changelog
-   
-### 2.0.0 ###
-   * Add setting to disable feature from Dashboard
-
-### 1.0.0 [Sep 01, 2019] ###
-   * Add Plugin to Hide WooCommerce Coupon Name
