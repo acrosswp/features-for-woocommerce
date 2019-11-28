@@ -11,6 +11,10 @@ jQuery( document ).ready( function ( $ ) {
 			} );
 		}
 	} );
+
+	jQuery( 'body.single-product form.variations_form' ).on( 'woocommerce_variation_has_changed', function () {
+		jQuery( 'body.single-product form.cart input.qty' ).val( 1 );
+	} );
 } );
 
 /**

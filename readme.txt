@@ -5,7 +5,7 @@ Donate link: https://raftaar1191.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.14
+Stable tag: 2.0.15
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -48,6 +48,12 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+
+= 2.0.15 =
+Add setting to exclude products from all the coupon code
+Update Changelog
+Fix only the Fly variable product issue
+
 = 2.0.14 =
 Update Tags
 

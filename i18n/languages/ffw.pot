@@ -63,7 +63,7 @@ msgid "Exclude Product from all the Coupon"
 msgstr ""
 
 #: includes/functions.php:50
-msgid "Create a new tab that give admin user access to add the product that are excluded from all thee coupon code"
+msgid "Create a new tab that give admin user access to add the product that are excluded from all the coupon code"
 msgstr ""
 
 #: includes/functions.php:54
@@ -71,14 +71,38 @@ msgid "Give Admin user interface to Exclude Product"
 msgstr ""
 
 #: includes/functions.php:57
-msgid "Enable BuddyPress Account Creation"
+msgid "Remove Coupon Option from Cart page"
 msgstr ""
 
 #: includes/functions.php:58
-msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgid "Remove apply coupon code boc from cart page"
 msgstr ""
 
 #: includes/functions.php:62
+msgid "Hide Apply Coupon from Cart page"
+msgstr ""
+
+#: includes/functions.php:65
+msgid "Remove Coupon Option from Checkout page"
+msgstr ""
+
+#: includes/functions.php:66
+msgid "Remove apply coupon code boc from Checkout page"
+msgstr ""
+
+#: includes/functions.php:70
+msgid "Hide Apply Coupon from Checkout page"
+msgstr ""
+
+#: includes/functions.php:73
+msgid "Enable BuddyPress Account Creation"
+msgstr ""
+
+#: includes/functions.php:74
+msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgstr ""
+
+#: includes/functions.php:78
 msgid "Give Admin user option to enable login like BuddyPress does"
 msgstr ""
 
