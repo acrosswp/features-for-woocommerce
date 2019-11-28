@@ -22,7 +22,9 @@ Add setting into the WooCommerce Setting tab to Enable or Disable Multiipal feat
 3. Give user a button to remove product on checkout page
 4. Show users exact price when user update product quantity on product single page
 5. Give Admin Interface to select Product that can not be use with Any Coupon
-6. Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress
+6. Give Admin user option to remove coupon code option from cart page
+7. Give Admin user option to remove coupon code option from checkout page
+8. Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress
 
 
 == Installation ==
