@@ -39,7 +39,7 @@ npm run-script build
 
 
 ## Changelog ##
-### 2.0.10 ###
+### 2.0.11 ###
    * Update Tags
    
 ### 2.0.10 ###
