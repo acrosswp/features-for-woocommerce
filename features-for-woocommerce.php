@@ -5,7 +5,7 @@
  * Description: This plugin provided a extra features for WooCommerce
  * Author:      raftaar1191
  * Author URI:  https://profiles.wordpress.org/raftaar1191/
- * Version:     2.0.7
+ * Version:     2.0.9
  * Text Domain: ffw
  * Domain Path: /i18n/languages/
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Codebase version
 if ( ! defined( 'FFW_PLUGIN_VERSION' ) ) {
-	define( 'FFW_PLUGIN_VERSION', '2.0.7' );
+	define( 'FFW_PLUGIN_VERSION', '2.0.9' );
 }
 
 // Plugin Root File.
