@@ -45,7 +45,7 @@ Yes.
 
 = Demo
 
-https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
+https://youtu.be/0uD3sGBXLQI
 
 == Changelog ==
 
