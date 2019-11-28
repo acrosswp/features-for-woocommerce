@@ -5,7 +5,7 @@ Tags: WooCommerce, BuddyPress, WordPress, Coupon
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.9
+Stable tag: 2.0.10
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,10 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+
+= 2.0.9 =
+Add setting to exclude products from all the coupon code
+
 = 2.0.9 =
 Update Changelog
 

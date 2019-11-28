@@ -42,7 +42,7 @@ const config = {
 wpPot( {
 	package: 'Features for WooCommerce',
 	domain: 'ffw',
-	destFile: 'i18n/languages/hcnfw.pot',
+	destFile: 'i18n/languages/ffw.pot',
 	relativeTo: './',
 	src: [ './**/*.php' ],
 	bugReport: 'https://github.com/raftaar1191/features-for-woocommerce/issues'
