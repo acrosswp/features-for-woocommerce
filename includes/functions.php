@@ -47,11 +47,27 @@ function ffm_settings_fields() {
 		),
 		array(
 			'title'    => __( 'Exclude Product from all the Coupon', 'ffw' ),
-			'desc'     => __( 'Create a new tab that give admin user access to add the product that are excluded from all thee coupon code', 'ffw' ),
+			'desc'     => __( 'Create a new tab that give admin user access to add the product that are excluded from all the coupon code', 'ffw' ),
 			'id'       => 'ffw_exclude_product_from_coupon_code',
 			'default'  => 'yes',
 			'type'     => 'checkbox',
 			'desc_tip' => __( 'Give Admin user interface to Exclude Product', 'ffw' ),
+		),
+		array(
+			'title'    => __( 'Remove Coupon Option from Cart page', 'ffw' ),
+			'desc'     => __( 'Remove apply coupon code boc from cart page', 'ffw' ),
+			'id'       => 'ffw_remove_apply_coupon_box_from_cart_page',
+			'default'  => 'no',
+			'type'     => 'checkbox',
+			'desc_tip' => __( 'Hide Apply Coupon from Cart page', 'ffw' ),
+		),
+		array(
+			'title'    => __( 'Remove Coupon Option from Checkout page', 'ffw' ),
+			'desc'     => __( 'Remove apply coupon code boc from Checkout page', 'ffw' ),
+			'id'       => 'ffw_remove_apply_coupon_box_from_checkout_page',
+			'default'  => 'no',
+			'type'     => 'checkbox',
+			'desc_tip' => __( 'Hide Apply Coupon from Checkout page', 'ffw' ),
 		),
 		array(
 			'title'             => __( 'Enable BuddyPress Account Creation', 'ffw' ),
