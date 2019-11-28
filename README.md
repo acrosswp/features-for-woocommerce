@@ -1,6 +1,6 @@
 👉🏻 Not a developer? Running WordPress? [Download Features for WooCommerce](https://wordpress.org/plugins/features-for-woocommerce/) on WordPress.org.
 
-![WordPress version](https://img.shields.io/wordpress/plugin/v/features-for-woocommerce.svg) ![WordPress Rating](https://img.shields.io/wordpress/plugin/r/features-for-woocommerce.svg) ![WordPress Downloads](https://img.shields.io/wordpress/plugin/dt/features-for-woocommerce.svg) 
+![WordPress version](https://img.shields.io/wordpress/plugin/v/features-for-woocommerce.svg) ![WordPress Rating](https://img.shields.io/wordpress/plugin/r/features-for-woocommerce.svg) ![WordPress Downloads](https://img.shields.io/wordpress/plugin/dt/features-for-woocommerce.svg) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/raftaar1191/features-for-woocommerce/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/raftaar1191/features-for-woocommerce/?branch=master)
 
 Welcome to the FFW GitHub repository. This is the core repository and heart of an ecosystem of active development. Here you can browse the source, look at open issues, and contribute to the project.
 
