@@ -46,6 +46,14 @@ function ffm_settings_fields() {
 			'desc_tip' => __( 'Show users exact price when user update product quantity', 'ffw' ),
 		),
 		array(
+			'title'    => __( 'Exclude Product from all the Coupon', 'ffw' ),
+			'desc'     => __( 'Create a new tab that give admin user access to add the product that are excluded from all thee coupon code', 'ffw' ),
+			'id'       => 'ffw_exclude_product_from_coupon_code',
+			'default'  => 'yes',
+			'type'     => 'checkbox',
+			'desc_tip' => __( 'Give Admin user interface to Exclude Product', 'ffw' ),
+		),
+		array(
 			'title'             => __( 'Enable BuddyPress Account Creation', 'ffw' ),
 			'desc'              => __( 'Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress', 'ffw' ),
 			'id'                => 'ffw_checkout_with_buddypress',
