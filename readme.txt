@@ -1,11 +1,11 @@
 === Features for WooCommerce ===
 Contributors: raftaar1191
-Tags: features for woo commerce, features for woo, hide coupon code, change quantity on checkout page, remove product on checkout page, update product price on the fly, exclude product from all the coupon, coupon, checkout, quantity change for woo commerce, ecommerce, e-commerce, woo
+Tags: woocommerce, checkout, quantity, woo commerce, product, price, buddypress, coupon, hide
 Donate link: https://raftaar1191.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.13
+Stable tag: 2.0.14
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,9 +17,12 @@ BuddyPress Account Creation
 == Description ==
 
 Add setting into the WooCommerce Setting tab to Enable or Disable Multiipal feature Like:
-1. Hide Coupon Code
-2. Change Quantity on Checkout Page
-3. BuddyPress Account Creation
+1. Enable/Disable Hiding of Coupon Code on Cart and Checkout page
+2. Give user ability to change quantity on checkout page
+3. Give user a button to remove product on checkout page
+4. Show users exact price when user update product quantity on product single page
+5. Give Admin Interface to select Product that can not be use with Any Coupon
+6. Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress
 
 
 == Installation ==
@@ -45,6 +48,9 @@ Yes.
 https://www.youtube.com/watch?v=6takhzirVoo&feature=youtu.be
 
 == Changelog ==
+= 2.0.14 =
+Update Tags
+
 = 2.0.13 =
 Update Tags
 
