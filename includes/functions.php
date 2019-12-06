@@ -14,6 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ffm_settings_fields() {
 	return array(
 		array(
+			'title'    => __( 'Sorting/filtering Coupons', 'ffw' ),
+			'desc'     => __( 'Give Admin user option to Sorting/filtering Coupons dashboard', 'ffw' ),
+			'id'       => 'ffw_sorting_coupons',
+			'default'  => 'yes',
+			'type'     => 'checkbox',
+			'desc_tip' => __( 'Give Admin user option to sort/filter the coupons in coupon dashboard area', 'ffw' ),
+		),
+		array(
 			'title'    => __( 'Enable Hide Coupon Code', 'ffw' ),
 			'desc'     => __( 'Give Admin user option to hide the coupon code', 'ffw' ),
 			'id'       => 'ffw_hide_coupon_code',
