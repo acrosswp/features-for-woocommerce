@@ -5,7 +5,7 @@ Donate link: https://raftaar1191.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.18
+Stable tag: 2.0.19
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,9 @@ Yes.
 https://youtu.be/0uD3sGBXLQI
 
 == Changelog ==
+
+= 2.0.19 =
+Add feature to allow sorting of coupon from Dashboard Coupon page
 
 = 2.0.18 =
 Add banner Images
