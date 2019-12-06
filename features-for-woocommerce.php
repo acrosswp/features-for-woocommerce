@@ -130,10 +130,13 @@ if ( ! class_exists( 'Feature_For_WooCommerce' ) ) {
 			/**
 			 * Update plugin row
 			 */
-			add_filter( 'network_admin_plugin_action_links_' . FFW_PLUGIN_BASENAME, array(
-				$this,
-				'plugin_action_links'
-			) );
+			add_filter(
+				'network_admin_plugin_action_links_' . FFW_PLUGIN_BASENAME,
+				array(
+					$this,
+					'plugin_action_links',
+				)
+			);
 			add_filter( 'plugin_action_links_' . FFW_PLUGIN_BASENAME, array( $this, 'plugin_action_links' ) );
 		}
 
@@ -171,6 +174,17 @@ if ( ! class_exists( 'Feature_For_WooCommerce' ) ) {
 			}
 
 			wp_register_script( 'ffw_frontend', FFW_PLUGIN_URL . 'assets/js/frontend.js', 'jquery', FFW_PLUGIN_VERSION, true );
+
+			$data = apply_filters(
+				'ffw_frontend_localize_script',
+				array(
+					'ajax_url' => admin_url( 'admin-ajax.php' ),
+				)
+			);
+
+			// Localize the script with new data.
+			wp_localize_script( 'ffw_frontend', 'ffw', $data );
+			wp_localize_script( 'ffw_admin', 'ffw', $data );
 		}
 
 		public function ffm_settings_pages( $settings ) {

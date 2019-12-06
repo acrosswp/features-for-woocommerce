@@ -15,94 +15,106 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: includes/functions.php:17
-msgid "Enable Hide Coupon Code"
+msgid "Sorting/filtering Coupons"
 msgstr ""
 
-#: includes/functions.php:18, includes/functions.php:22
-msgid "Give Admin user option to hide the coupon code"
+#: includes/functions.php:18
+msgid "Give Admin user option to Sorting/filtering Coupons dashboard"
+msgstr ""
+
+#: includes/functions.php:22
+msgid "Give Admin user option to sort/filter the coupons in coupon dashboard area"
 msgstr ""
 
 #: includes/functions.php:25
-msgid "Change Quantity on Checkout Page"
+msgid "Enable Hide Coupon Code"
 msgstr ""
 
-#: includes/functions.php:26
-msgid "Give user option to update quantity on checkout page"
-msgstr ""
-
-#: includes/functions.php:30
-msgid "Give users option to update quantity on checkout page"
+#: includes/functions.php:26, includes/functions.php:30
+msgid "Give Admin user option to hide the coupon code"
 msgstr ""
 
 #: includes/functions.php:33
-msgid "Remove Product on Checkout Page"
+msgid "Change Quantity on Checkout Page"
 msgstr ""
 
 #: includes/functions.php:34
-msgid "Give user option to button to remove product on checkout page"
+msgid "Give user option to update quantity on checkout page"
 msgstr ""
 
 #: includes/functions.php:38
-msgid "Give users option to remove product on checkout page"
+msgid "Give users option to update quantity on checkout page"
 msgstr ""
 
 #: includes/functions.php:41
-msgid "Update Product price on the fly"
+msgid "Remove Product on Checkout Page"
 msgstr ""
 
 #: includes/functions.php:42
-msgid "Update Product price when user change the product quantity"
+msgid "Give user option to button to remove product on checkout page"
 msgstr ""
 
 #: includes/functions.php:46
-msgid "Show users exact price when user update product quantity"
+msgid "Give users option to remove product on checkout page"
 msgstr ""
 
 #: includes/functions.php:49
-msgid "Exclude Product from all the Coupon"
+msgid "Update Product price on the fly"
 msgstr ""
 
 #: includes/functions.php:50
-msgid "Create a new tab that give admin user access to add the product that are excluded from all the coupon code"
+msgid "Update Product price when user change the product quantity"
 msgstr ""
 
 #: includes/functions.php:54
-msgid "Give Admin user interface to Exclude Product"
+msgid "Show users exact price when user update product quantity"
 msgstr ""
 
 #: includes/functions.php:57
-msgid "Remove Coupon Option from Cart page"
+msgid "Exclude Product from all the Coupon"
 msgstr ""
 
 #: includes/functions.php:58
-msgid "Remove apply coupon code boc from cart page"
+msgid "Create a new tab that give admin user access to add the product that are excluded from all the coupon code"
 msgstr ""
 
 #: includes/functions.php:62
-msgid "Hide Apply Coupon from Cart page"
+msgid "Give Admin user interface to Exclude Product"
 msgstr ""
 
 #: includes/functions.php:65
-msgid "Remove Coupon Option from Checkout page"
+msgid "Remove Coupon Option from Cart page"
 msgstr ""
 
 #: includes/functions.php:66
-msgid "Remove apply coupon code boc from Checkout page"
+msgid "Remove apply coupon code boc from cart page"
 msgstr ""
 
 #: includes/functions.php:70
-msgid "Hide Apply Coupon from Checkout page"
+msgid "Hide Apply Coupon from Cart page"
 msgstr ""
 
 #: includes/functions.php:73
-msgid "Enable BuddyPress Account Creation"
+msgid "Remove Coupon Option from Checkout page"
 msgstr ""
 
 #: includes/functions.php:74
-msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgid "Remove apply coupon code boc from Checkout page"
 msgstr ""
 
 #: includes/functions.php:78
+msgid "Hide Apply Coupon from Checkout page"
+msgstr ""
+
+#: includes/functions.php:81
+msgid "Enable BuddyPress Account Creation"
+msgstr ""
+
+#: includes/functions.php:82
+msgid "Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress"
+msgstr ""
+
+#: includes/functions.php:86
 msgid "Give Admin user option to enable login like BuddyPress does"
 msgstr ""
 
@@ -138,27 +150,35 @@ msgid ""
 "Your password has been automatically generated: %s"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:39, includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:39
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:49
+msgid "FFM excluded Coupon"
+msgstr ""
+
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:50
+msgid "Check this box remove this coupon for FFW excluded products list"
+msgstr ""
+
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:81, includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:82
 msgid "Exclude Product From Coupons"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:57
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:103
 msgid "FFW: Exclude Product From Coupons"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:78
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:124
 msgid "Select Product"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:85
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:131
 msgid "Products"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:93
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:139
 msgid "This is an Multiple Dropout select the products that you want to exclusde from all the Coupon code"
 msgstr ""
 
-#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:101
+#: includes/ffw_exclude_product_from_coupon_code/ffw_exclude_product_from_coupon_code.php:147
 msgid "Search for a product&hellip;"
 msgstr ""
 
