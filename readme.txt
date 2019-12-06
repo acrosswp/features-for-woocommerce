@@ -5,7 +5,7 @@ Donate link: https://raftaar1191.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.0.19
+Stable tag: 2.0.20
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,14 +17,17 @@ BuddyPress Account Creation
 == Description ==
 
 Add setting into the WooCommerce Setting tab to Enable or Disable Multiipal feature Like:
-1. Enable/Disable Hiding of Coupon Code on Cart and Checkout page
-2. Give user ability to change quantity on checkout page
-3. Give user a button to remove product on checkout page
-4. Show users exact price when user update product quantity on product single page
-5. Give Admin Interface to select Product that can not be use with Any Coupon
-6. Give Admin user option to remove coupon code option from cart page
-7. Give Admin user option to remove coupon code option from checkout page
-8. Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress
+1. Give user ability to sort/filter coupon in Dashboard > WooCommerce > Coupon page
+2. Enable/Disable Hiding of Coupon Code on Cart and Checkout page
+3. Give user ability to change quantity on checkout page
+4. Give user a button to remove product on checkout page
+5. Show users exact price when user update product quantity on product single page
+6. Give Admin Interface to select Product that can not be use with Any Coupon
+7. Give Admin user option to remove coupon code option from cart page
+8. Give Admin user option to remove coupon code option from checkout page
+9. Give Admin user option to enable login like BuddyPress does or you can say Checkout With BuddyPress
+
+Demo: https://youtu.be/0uD3sGBXLQI
 
 
 == Installation ==
@@ -41,15 +44,19 @@ e.g.
 
 == Frequently Asked Questions ==
 
+= Enabling Sorting/filtering of Coupon in Dashboard > WooCommerce > Coupon page
+
+https://youtu.be/239yXRP-b9Y
+
 = Support Old version of WooCommerce =
 
 Yes.
 
-= Demo
-
-https://youtu.be/0uD3sGBXLQI
-
 == Changelog ==
+
+= 2.0.20 =
+Fix JS issue
+Add demo video
 
 = 2.0.19 =
 Add feature to allow sorting of coupon from Dashboard Coupon page
