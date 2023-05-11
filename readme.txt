@@ -1,7 +1,7 @@
 === Features for WooCommerce ===
-Contributors: raftaar1191
+Contributors: acrosswp
 Tags: woocommerce, checkout, quantity, woo commerce, product, price, buddypress, coupon, hide
-Donate link: https://raftaar1191.com/
+Donate link: https://acrosswp.com/
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 5.6

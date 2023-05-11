@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Features for WooCommerce
- * Plugin URI:  https://raftaar1191.com/
+ * Plugin URI:  https://acrosswp.com/
  * Description: This plugin provided a extra features for WooCommerce
- * Author:      raftaar1191
- * Author URI:  https://profiles.wordpress.org/raftaar1191/
+ * Author:      acrosswp
+ * Author URI:  https://profiles.wordpress.org/acrosswp/
  * Version:     2.0.20
  * Text Domain: ffw
  * Domain Path: /i18n/languages/

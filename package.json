@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raftaar1191/features-for-woocommerce.git"
+    "url": "git+https://github.com/acrosswp/features-for-woocommerce.git"
   },
   "keywords": [
     "wordpress",
@@ -23,12 +23,12 @@
     "webpack",
     "javascript"
   ],
-  "author": "raftaar1191",
+  "author": "acrosswp",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/raftaar1191/features-for-woocommerce/issues"
+    "url": "https://github.com/acrosswp/features-for-woocommerce/issues"
   },
-  "homepage": "https://github.com/raftaar1191/features-for-woocommerce#readme",
+  "homepage": "https://github.com/acrosswp/features-for-woocommerce#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
