@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Features for WooCommerce
+# Copyright (C) 2023 Features for WooCommerce
 # This file is distributed under the same license as the Features for WooCommerce package.
 msgid ""
 msgstr ""
