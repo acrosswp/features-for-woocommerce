@@ -45,7 +45,7 @@ wpPot( {
 	destFile: 'i18n/languages/ffw.pot',
 	relativeTo: './',
 	src: [ './**/*.php' ],
-	bugReport: 'https://github.com/raftaar1191/features-for-woocommerce/issues'
+	bugReport: 'https://github.com/acrosswp/features-for-woocommerce/issues'
 } );
 
 // Export the config object.

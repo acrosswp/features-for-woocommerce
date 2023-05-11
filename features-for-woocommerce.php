@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Features for WooCommerce
- * Plugin URI:  https://raftaar1191.com/
+ * Plugin URI:  https://acrosswp.com/
  * Description: This plugin provided a extra features for WooCommerce
- * Author:      raftaar1191
- * Author URI:  https://profiles.wordpress.org/raftaar1191/
- * Version:     2.0.20
+ * Author:      acrosswp
+ * Author URI:  https://profiles.wordpress.org/acrosswp/
+ * Version:     3.0.0
  * Text Domain: ffw
  * Domain Path: /i18n/languages/
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Codebase version
 if ( ! defined( 'FFW_PLUGIN_VERSION' ) ) {
-	define( 'FFW_PLUGIN_VERSION', '2.0.20' );
+	define( 'FFW_PLUGIN_VERSION', '3.0.0' );
 }
 
 // Plugin Root File.
