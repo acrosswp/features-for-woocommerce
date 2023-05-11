@@ -5,7 +5,7 @@
  * Description: This plugin provided a extra features for WooCommerce
  * Author:      acrosswp
  * Author URI:  https://profiles.wordpress.org/acrosswp/
- * Version:     2.0.20
+ * Version:     3.0.0
  * Text Domain: ffw
  * Domain Path: /i18n/languages/
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Codebase version
 if ( ! defined( 'FFW_PLUGIN_VERSION' ) ) {
-	define( 'FFW_PLUGIN_VERSION', '2.0.20' );
+	define( 'FFW_PLUGIN_VERSION', '3.0.0' );
 }
 
 // Plugin Root File.

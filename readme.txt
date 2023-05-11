@@ -2,10 +2,10 @@
 Contributors: acrosswp, raftaar1191
 Tags: woocommerce, checkout, quantity, woo commerce, product, price, buddypress, coupon, hide
 Donate link: https://acrosswp.com/
-Requires at least: 4.9
-Tested up to: 5.3
-Requires PHP: 5.6
-Stable tag: 2.0.20
+Requires at least: WordPress 4.1
+Tested up to: 6.1.1
+Stable tag: 4.6.13
+Requires PHP: 8.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,6 +53,9 @@ https://youtu.be/239yXRP-b9Y
 Yes.
 
 == Changelog ==
+= 3.0.0 =
+Transfer Ownership
+Test Plugins with WooCommerce
 
 = 2.0.20 =
 Fix JS issue
