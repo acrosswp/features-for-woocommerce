@@ -10,7 +10,7 @@
   },
   "scripts": {
     "watch": "webpack --mode=development --watch --config webpack-config.js",
-    "build": "webpack --mode=production --config webpack-config.js"
+    "build-production": "webpack --mode=production --config webpack-config.js"
   },
   "repository": {
     "type": "git",
