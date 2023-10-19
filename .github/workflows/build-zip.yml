@@ -21,4 +21,4 @@ jobs:
       - name: Generate zip
         uses: 10up/action-wordpress-plugin-build-zip@stable
         env:
-          SLUG: wordpress-plugin-boilerplate # optional, remove if GitHub repo name matches SVN slug, including capitalization
+          SLUG: features-for-woocommerce # optional, remove if GitHub repo name matches SVN slug, including capitalization
